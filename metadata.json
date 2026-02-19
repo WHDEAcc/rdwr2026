@@ -1,0 +1,7 @@
+{
+  "name": "Verdant Vision Landscape Architecture",
+  "description": "A high-end, cinematic portfolio website for a landscape design studio, featuring sophisticated aesthetics, project case studies, and an AI-powered design consultant.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
