@@ -1,28 +1,55 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Verdant Vision - Award-winning landscape architecture for residential and commercial spaces." />
-    <title>Verdant Vision | Award-Winning Landscape Architecture</title>
+    <meta name="description" content="EDGE Landscape Architecture - Award-winning landscape architecture studio based in Shenzhen and Hong Kong." />
+    <title>EDGE Landscape Architecture | 前场规划设计</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
+              primary: '#000000',
+              secondary: '#ffffff',
+              muted: '#6b7280',
+              accent: '#2563eb',
+              surface: '#f5f5f5',
+              // Legacy colors for gradual migration
               sage: '#8FA79A',
               earth: '#5D4E37',
               warmBeige: '#F5F0E8',
-              accent: '#B8860B'
             },
             fontFamily: {
-              serif: ['Playfair Display', 'serif'],
+              serif: ['"Cormorant Garamond"', 'serif'],
+              display: ['"Instrument Serif"', 'serif'],
               sans: ['Inter', 'sans-serif'],
+            },
+            keyframes: {
+              fadeInUp: {
+                from: { opacity: '0', transform: 'translateY(20px)' },
+                to: { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideIn: {
+                from: { opacity: '0', transform: 'translateY(10px)' },
+                to: { opacity: '1', transform: 'translateY(0)' },
+              },
+              textReveal: {
+                from: { clipPath: 'inset(0 100% 0 0)' },
+                to: { clipPath: 'inset(0 0 0 0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'slide-in': 'slideIn 0.6s ease-out forwards',
+              'text-reveal': 'textReveal 1s ease-out forwards',
             },
           },
         },
@@ -30,30 +57,89 @@
     </script>
     <style>
       body {
-        background-color: #F5F0E8;
-        color: #5D4E37;
+        background-color: #ffffff;
+        color: #000000;
         overflow-x: hidden;
       }
-      .perspective-text {
-        perspective: 1000px;
+
+      /* Snohetta-style mix-blend-exclusion header */
+      .header-blend {
+        mix-blend-mode: exclusion;
+        color: #ffffff;
       }
-      .fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
+
+      /* Dark mode */
+      .dark body {
+        background-color: #111815;
+        color: #ffffff;
       }
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+
+      /* Horizontal drag scrollbar hiding */
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* Custom cursor */
+      .drag-cursor { cursor: grab; }
+      .drag-cursor:active { cursor: grabbing; }
+
+      /* Text mask effect — hero title reveals project imagery */
+      .text-mask {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.6s ease;
       }
-      ::-webkit-scrollbar {
-        width: 8px;
+
+      /* 3D Tilt perspective container */
+      .tilt-card {
+        transform-style: preserve-3d;
+        transition: transform 0.15s ease-out;
       }
-      ::-webkit-scrollbar-track {
-        background: #F5F0E8;
+      .tilt-card .tilt-glare {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255,255,255,0.25), transparent 60%);
       }
-      ::-webkit-scrollbar-thumb {
-        background: #8FA79A;
-        border-radius: 4px;
+      .tilt-card:hover .tilt-glare {
+        opacity: 1;
       }
+
+      /* Minimal scrollbar */
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 2px; }
+
+      /* Mobile-specific optimizations */
+      @media (max-width: 767px) {
+        /* Force GPU compositing for smoother animations */
+        .text-mask, .tilt-card {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+        }
+        /* Smooth carousel scrolling on touch */
+        .overflow-hidden {
+          -webkit-overflow-scrolling: touch;
+        }
+        /* Wider tap targets on mobile */
+        button, a {
+          min-height: 44px;
+        }
+      }
+
+      /* Hide scrollbar cross-browser */
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
           animation-duration: 0.01ms !important;

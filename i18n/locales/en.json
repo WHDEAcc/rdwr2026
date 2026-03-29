@@ -1,0 +1,437 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "close": "Close",
+    "search": "Search",
+    "searchPlaceholder": "Search projects...",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "people": "People",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title_line1": "Designing landscapes",
+    "title_line2": "that shape how people",
+    "title_line3": "experience the world",
+    "subtitle": "Award-winning landscape architecture spanning 14 years across China, Hong Kong, and beyond."
+  },
+  "disciplines": {
+    "sectionTitle": "Disciplines"
+  },
+  "philosophy": {
+    "sectionTitle": "Philosophy",
+    "heading": "Harmonizing nature\nand human experience",
+    "title_line1": "Harmonizing nature",
+    "title_line2": "and human experience"
+  },
+  "testimonials": {
+    "sectionTitle": "Perspectives"
+  },
+  "contact": {
+    "heading_line1": "Let's work",
+    "heading_line2": "together"
+  },
+  "footer": {
+    "studioName": "EDGE",
+    "studioName_line1": "EDGE",
+    "studioName_line2": "Landscape Architecture",
+    "studioFullName": "Landscape Architecture",
+    "description": "Award-winning landscape architecture studio with offices in Shenzhen and Hong Kong. We create living environments that resonate with the human spirit.",
+    "studioDescription": "Award-winning landscape architecture studio with offices in Shenzhen and Hong Kong. We create living environments that resonate with the human spirit.",
+    "shenzhen": "Shenzhen",
+    "shenzhenAddress_line1": "Nanshan District",
+    "shenzhenAddress_line2": "Shenzhen, China",
+    "shenzhenAddress": "Nanshan District\nShenzhen, China",
+    "hongKong": "Hong Kong",
+    "hongKongAddress_line1": "Central District",
+    "hongKongAddress_line2": "Hong Kong SAR",
+    "hongKongAddress": "Central District\nHong Kong SAR",
+    "copyright": "© {{year}} EDGE Landscape Architecture"
+  },
+  "ai": {
+    "title": "Design Consultant",
+    "status": "AI Assistant Online",
+    "welcome": "Hello. I am the EDGE Landscape Architecture design consultant. How can I assist with your landscape architecture needs today?",
+    "placeholder": "Ask about sustainable materials...",
+    "error": "I apologize, but I'm currently unable to connect to my design knowledge base. Please try again later.",
+    "disclaimer": "AI can make mistakes. Please verify important information.",
+    "close": "Close",
+    "sendLabel": "Send message",
+    "openLabel": "Open Design Consultant"
+  },
+  "projectDetail": {
+    "close": "Close",
+    "closeLabel": "Close project detail",
+    "keyResponsibilities": "Key Responsibilities",
+    "galleryAlt": "Gallery image {{index}}"
+  },
+  "projects": {
+    "1": {
+      "title": "Shenzhen Xili Railway Station Hub Silk Park",
+      "subtitle": "Sustainable urban park integrating high-speed railway infrastructure",
+      "description": "Sustainable urban park design integrating high-speed railway infrastructure with public green spaces and water management systems. Collaborated with Nikken Sekkei as architectural consultant. Client: China 4th Railway Civil Engineering Group. Project value: $42.8 million USD.",
+      "keyResponsibilities": [
+        "Project management from conceptual design to construction documentation",
+        "Design leadership coordinating internal teams and external consultants",
+        "Weekly meetings with architectural consultants to align design documents",
+        "Team collaboration, mentorship of junior staff, and AI-assisted computational design workflows"
+      ]
+    },
+    "2": {
+      "title": "Nanshan Innovation Boulevard",
+      "subtitle": "Innovation district connectivity through sustainable transportation",
+      "description": "Comprehensive 8-kilometer boulevard landscape design promoting innovation district connectivity and sustainable transportation. Client: SUTPC (Shenzhen Urban Transport Planning Center). Project value: $85.71 million USD.",
+      "keyResponsibilities": [
+        "Design schedule creation and weekly client meetings",
+        "Contract and client management",
+        "Quality control through site inspections",
+        "Sustainability planning and environmental considerations"
+      ]
+    },
+    "3": {
+      "title": "Baguang Coastal Landscape Design",
+      "subtitle": "Resilient coastal design addressing climate change",
+      "description": "Resilient coastal design spanning 107 hectares, addressing climate change impacts while creating diverse public spaces and ecological restoration. Client: Shenzhen Water and Planning Design Group. Project value: $57.2 million USD.",
+      "keyResponsibilities": [
+        "Multi-disciplinary team coordination (ecologists, hydrologists, planners)",
+        "Diverse public space design for parks, plazas, streetscapes",
+        "City resilience design integration",
+        "Stakeholder engagement with communities and government agencies"
+      ]
+    },
+    "4": {
+      "title": "Dongguan Humen TOD Railway Station",
+      "subtitle": "Award-winning TOD development integrating landscape with rail",
+      "description": "Award-winning TOD development integrating landscape design with high-speed rail infrastructure. Client: Poly Real Estate Group. Winner of the 2021 Yuanye Award Gold Prize. Project value: $2.9 million USD.",
+      "keyResponsibilities": [
+        "Project bidding and creative design concept development",
+        "Site survey organization and condition assessment",
+        "Design sketches from concept to construction stages",
+        "Monthly site inspection reports and budget management"
+      ]
+    },
+    "5": {
+      "title": "Avenue of Stars, Tsim Sha Tsui",
+      "subtitle": "Iconic waterfront promenade renovation",
+      "description": "Iconic waterfront promenade renovation combining cultural heritage with modern landscape design. Concept design by James Corner Field Operations; construction documentation by URBIS. Client: New World Property. Project value: $10 million USD.",
+      "keyResponsibilities": [
+        "Construction documentation specialist in collaboration with James Corner Field Operations",
+        "Design development and technical coordination with lighting, structure, and drainage consultants",
+        "Site supervision, mock-up component review, and implementation oversight",
+        "Cultural heritage integration, materials selection, and quality control"
+      ]
+    },
+    "6": {
+      "title": "Yantai Bajiao Bay International Convention Center",
+      "subtitle": "Large-scale convention center landscape design",
+      "description": "Large-scale convention center landscape design integrating \"City Shore Cloud Waves & Sea Cloud Shell\" concept. 8 indoor exhibition halls covering 56,000m². Project investment: $465 million USD.",
+      "keyResponsibilities": [
+        "Project Manager overseeing full design and construction lifecycle",
+        "Concept design and design development",
+        "Client presentation leadership for design concepts and scheme proposals",
+        "Creative scheme development and design iteration management"
+      ]
+    },
+    "7": {
+      "title": "Yuen Long South Residential Development",
+      "subtitle": "Environmental assessment and landscape design strategy",
+      "description": "Environmental assessment and landscape design strategy for large-scale 120-hectare residential development planning. Completed at ARUP Hong Kong for the Hong Kong Planning Department.",
+      "keyResponsibilities": [
+        "Environmental assessment identifying valuable landscape resources and visual impact",
+        "Landscape design strategy including tree preservation, streetscape, and green infrastructure",
+        "Urban planting design guideline development with species specification",
+        "Multi-disciplinary coordination with ecologists, engineers, and architects at ARUP"
+      ]
+    },
+    "8": {
+      "title": "Mountain and Blue Residential Project",
+      "subtitle": "Remarkable landscape design capitalizing on terrain",
+      "description": "Remarkable landscape design by New World Group capitalizing on \"three-sided mountain, one-sided sea\" terrain. Features a 24-meter three-tiered waterfall, 360-meter spring water system, and terraced design.",
+      "keyResponsibilities": [
+        "Terrain elevation management through ingenious terrace design",
+        "Super high-rise setback and overhang design mimicking mountain shapes",
+        "24-meter three-tiered waterfall and spring water system design",
+        "Rock-wall waterfalls and native plant ecological buffer creation"
+      ]
+    },
+    "9": {
+      "title": "Yuexiu Nanzhou Road Residential Garden",
+      "subtitle": "Premium residential landscape with integrated water systems",
+      "description": "Premium residential landscape featuring integrated water systems, modern architectural elements, and sustainable urban design with innovative circular building forms and terraced landscaping.",
+      "keyResponsibilities": [
+        "Cross-disciplinary team coordination between architects, engineers, and landscape consultants",
+        "Project timeline management and milestone tracking",
+        "Quality assurance and design compliance monitoring throughout construction",
+        "Budget coordination and resource allocation management"
+      ]
+    }
+  },
+  "services": {
+    "0": {
+      "title": "Residential Design",
+      "description": "Custom garden concepts, outdoor living spaces, and detailed planting plans tailored to your home.",
+      "price": "Starting at $8,000"
+    },
+    "1": {
+      "title": "Commercial Architecture",
+      "description": "Strategic landscape planning for corporate campuses, hospitality venues, and public developments.",
+      "price": "Custom Quotation"
+    },
+    "2": {
+      "title": "Garden Renovation",
+      "description": "Historic restoration or modern updates to breathe new life into existing outdoor environments.",
+      "price": "Starting at $5,000"
+    }
+  },
+  "philosophyItems": {
+    "0": {
+      "title": "Sustainable Practices",
+      "description": "Using native plants and eco-friendly irrigation to support local ecosystems."
+    },
+    "1": {
+      "title": "Artistic Vision",
+      "description": "Award-winning aesthetics that harmonize with your home's architecture."
+    },
+    "2": {
+      "title": "Client-Centered",
+      "description": "Collaborative designs that reflect your personal lifestyle and aspirations."
+    },
+    "3": {
+      "title": "Technical Excellence",
+      "description": "Precise engineering ensures longevity and functional brilliance in every build."
+    }
+  },
+  "testimonialItems": {
+    "0": {
+      "name": "Director Zhang Wei",
+      "role": "China 4th Railway Civil Engineering Group — Shenzhen Xili Railway Station Hub",
+      "quote": "EDGE's integration of park design with our high-speed rail infrastructure was exceptional. The Silk Park concept transformed what could have been a utilitarian transit hub into a genuine public amenity."
+    },
+    "1": {
+      "name": "Chief Planner Li Ming",
+      "role": "SUTPC — Nanshan Innovation Boulevard",
+      "quote": "The 8-kilometer boulevard design exceeded our expectations in creating a cohesive identity for the innovation district. Their sustainable transportation planning set a new benchmark for Shenzhen."
+    },
+    "2": {
+      "name": "Project Director Chen Hao",
+      "role": "Poly Real Estate Group — Dongguan Humen TOD Station",
+      "quote": "Winning the 2021 Yuanye Award Gold Prize validated what we knew from day one — EDGE brought a level of design ambition to our TOD project that was truly award-worthy."
+    }
+  },
+  "categories": {
+    "Transportation Infrastructure": "Urban Mobility & Transit",
+    "Urban Design": "Civic Vitality",
+    "Waterfront Design": "Ecological Resilience",
+    "Civic Spaces": "Public Realm & Community",
+    "Convention Centers": "Landmark Destinations",
+    "Residential": "Living Environments"
+  },
+  "locations": {
+    "Shenzhen, China": "Shenzhen, China",
+    "Dongguan, China": "Dongguan, China",
+    "Hong Kong": "Hong Kong",
+    "Yantai, Shandong, China": "Yantai, Shandong, China",
+    "Shekou, Shenzhen, China": "Shekou, Shenzhen, China",
+    "Guangzhou, China": "Guangzhou, China"
+  },
+  "about": {
+    "sectionTitle": "About",
+    "name": "Weihao DU",
+    "title": "Associate Landscape Architect",
+    "location": "Shenzhen, China — 14 Years Experience",
+    "summary": "Internationally experienced Landscape Designer with 14 years of diverse projects including large-scale city planning, waterfront and civic parks, high-end commercial complexes, and residential landscapes across mainland China, Hong Kong, Taiwan, and Melbourne.",
+    "aiSummary": "Proficient in leveraging cutting-edge AI tools including Claude Code, Cursor, Replit, ChatGPT, Midjourney, and CapCut to enhance design workflows, rapid prototyping, and digital content creation — bridging traditional landscape architecture with emerging creative technology.",
+    "experienceTitle": "Experience",
+    "experience": {
+      "aecom": {
+        "role": "Associate Landscape Architect",
+        "location": "Shenzhen, China"
+      },
+      "newground": {
+        "role": "Landscape Team Leader",
+        "company": "New Ground Environment",
+        "location": "Shenzhen, China"
+      },
+      "urbis": {
+        "role": "Landscape Designer",
+        "location": "Hong Kong"
+      },
+      "arup": {
+        "role": "Landscape Designer",
+        "location": "Hong Kong"
+      }
+    },
+    "educationTitle": "Education",
+    "education": {
+      "masters": {
+        "degree": "Master of Landscape Architecture",
+        "university": "University of Melbourne, Australia"
+      },
+      "bachelors": {
+        "degree": "Bachelor of Landscape Architecture",
+        "university": "South China Agricultural University"
+      }
+    },
+    "certificationLabel": "Certification",
+    "certification": "Guangdong Province Intermediate Landscape Architect, China",
+    "skillsTitle": "Skills",
+    "aiToolsLabel": "AI & Creative Technology",
+    "professionalToolsLabel": "Professional Software",
+    "languagesTitle": "Languages",
+    "languages": {
+      "english": "English",
+      "chinese": "Chinese",
+      "cantonese": "Cantonese",
+      "advanced": "Advanced",
+      "fluent": "Fluent"
+    },
+    "teamTitle": "Our Team"
+  },
+  "people": {
+    "sectionTitle": "People",
+    "headline": "A hybrid studio of human vision and digital agents",
+    "description": "EDGE operates as a future-forward practice where human creativity directs a team of specialized AI agents — each trained in a core discipline of landscape architecture, from planning to visualization.",
+    "team": {
+      "weihao": {
+        "name": "Ryonx DU",
+        "role": "Design Director / Founder",
+        "location": "Shenzhen, China",
+        "email": "rdxmmcdu@gmail.com",
+        "bio": "14 years of international landscape architecture experience across China, Hong Kong, and Melbourne. Former Associate at AECOM. Bridging traditional design practice with AI-driven creative workflows."
+      },
+      "novaLin": {
+        "name": "Nova.Lin",
+        "role": "Landscape Planner",
+        "location": "Digital / Shenzhen",
+        "bio": "Specializes in large-scale master planning and land-use strategy. Trained on regional ecological frameworks, greenway networks, and policy-responsive site analysis for projects spanning 50–500 hectares."
+      },
+      "axiomK": {
+        "name": "Axiom.K",
+        "role": "Landscape Designer",
+        "location": "Digital / Hong Kong",
+        "bio": "Focused on detail design and planting composition. Generates grading plans, hardscape detailing, and species-specific planting palettes calibrated to subtropical and temperate climatic zones."
+      },
+      "terraZhang": {
+        "name": "Terra.Zhang",
+        "role": "Project Manager",
+        "location": "Digital / Shenzhen",
+        "bio": "Coordinates multi-disciplinary workflows across architecture, civil engineering, and landscape consultants. Manages project timelines, deliverable tracking, and client communication protocols."
+      },
+      "vectorWu": {
+        "name": "Vector.Wu",
+        "role": "Graphic Designer",
+        "location": "Digital / Shenzhen",
+        "bio": "Produces presentation layouts, competition boards, and brand identity systems for landscape and urban design projects. Specializes in editorial typography and data visualization for design narratives."
+      },
+      "pixelChen": {
+        "name": "Pixel.Chen",
+        "role": "3D Visualization Specialist",
+        "location": "Digital / Hong Kong",
+        "bio": "Creates photorealistic renderings, aerial perspectives, and immersive walkthrough animations. Proficient in Lumion, V-Ray, and real-time Unreal Engine environments for landscape visualization."
+      },
+      "synthWong": {
+        "name": "Synth.Wong",
+        "role": "Urban Planner",
+        "location": "Digital / Shenzhen",
+        "bio": "Analyzes urban morphology, transit-oriented development patterns, and public realm strategies. Generates zoning studies, pedestrian flow models, and streetscape design frameworks for municipal-scale projects."
+      },
+      "atlasFang": {
+        "name": "Atlas.Fang",
+        "role": "Design Director",
+        "location": "Digital / Shenzhen",
+        "bio": "Synthesizes concept narratives and design intent across project phases. Oversees design coherence from schematic through construction documentation, ensuring alignment between vision and buildability."
+      }
+    }
+  },
+  "navCategories": {
+    "0": {
+      "label": "Disciplines",
+      "links": {
+        "0": "Civic Vitality",
+        "1": "Ecological Resilience",
+        "2": "Urban Mobility & Transit",
+        "3": "Living Environments"
+      }
+    },
+    "1": {
+      "label": "Studio",
+      "links": {
+        "0": "About",
+        "1": "Services",
+        "2": "Contact"
+      }
+    }
+  },
+  "ideas": {
+    "sectionTitle": "Ideas",
+    "viewAll": "Research & Thinking",
+    "readMore": "Read",
+    "items": {
+      "0": {
+        "topic": "Climate Action & Adaptation",
+        "headline": "Playbook for the Pyrocene: Wildfire-Adaptive Landscape Design",
+        "teaser": "A comprehensive guide offering six rules-of-thumb and 20 applied strategies for designing landscapes that adapt to increasingly frequent wildfire events.",
+        "year": "2024",
+        "source": "SWA Group · XL Lab",
+        "url": "https://www.swagroup.com/idea/pyrocene/"
+      },
+      "1": {
+        "topic": "Urban Resiliency",
+        "headline": "Carbon Conscience: Assessing Carbon Impact in Early Design Phases",
+        "teaser": "A free web-based carbon calculator enabling designers to estimate emissions, storage and sequestration at the earliest stages of planning — when flexibility is highest.",
+        "year": "2023",
+        "source": "Sasaki",
+        "url": "https://www.sasaki.com/voices/carbon-conscience/"
+      },
+      "2": {
+        "topic": "Thermal Comfort",
+        "headline": "The Ellinikon Park: Practice-Based Research for Europe's Largest Coastal Park",
+        "teaser": "Rigorous research into thermal comfort, carbon neutrality within 35 years, and ecological restoration using 3.3 million Greek-sourced native plants.",
+        "year": "2024",
+        "source": "Sasaki · Landscape Journal",
+        "url": "https://www.sasaki.com/projects/the-ellinikon-park/"
+      },
+      "3": {
+        "topic": "Urban Mobility",
+        "headline": "Post-COVID Adaptive Planning: Rethinking the Urban Core",
+        "teaser": "Analyzing shifts in pedestrian flow and public space utilization to create adaptive planning frameworks for dynamic, resilient urban centers.",
+        "year": "2024",
+        "source": "World Landscape Architecture",
+        "url": "https://worldlandscapearchitect.com/post-covid-adaptive-planning-in-wuhan-south-core-of-optics-valley/"
+      },
+      "4": {
+        "topic": "Decarbonization",
+        "headline": "Decarbonizing the Design Process: A Phase-by-Phase Approach",
+        "teaser": "A practical toolkit for landscape architects to reduce carbon emissions across all project phases — from kickoff through construction and operations.",
+        "year": "2024",
+        "source": "ASLA · SWA Group",
+        "url": "https://www.asla.org/climateactionplan.aspx"
+      },
+      "5": {
+        "topic": "Nature-Based Solutions",
+        "headline": "Nature Risk Screening: Piloting TNFD's LEAP Approach for Infrastructure",
+        "teaser": "Applying the TNFD Locate-Evaluate-Assess-Prepare framework to infrastructure projects across Asia, shifting from reactive mitigation to strategic nature-positive planning.",
+        "year": "2023",
+        "source": "AECOM · Global Canopy",
+        "url": "https://aecom.com/without-limits/article/nature-positive-infrastructure/"
+      },
+      "6": {
+        "topic": "Digital Landscape",
+        "headline": "Invasive Species: Networks, Gadgets, and Commons in the Digitized Landscape",
+        "teaser": "Investigating how surveillance cameras, location-based apps, and autonomous technologies are fundamentally altering the public realm and the designer's role.",
+        "year": "2024",
+        "source": "SWA Group · Curran Fellowship",
+        "url": "https://www.swagroup.com/ideas/research-innovation/"
+      },
+      "7": {
+        "topic": "Climate Infrastructure",
+        "headline": "Climate Infrastructure Toolkit: Resilience Strategies for Urban Landscapes",
+        "teaser": "A practical framework for integrating climate adaptation into landscape architecture, with case studies on coastal resilience, urban heat mitigation, and stormwater management.",
+        "year": "2023",
+        "source": "SWA Group · XL Lab",
+        "url": "https://www.swagroup.com/idea/climate_infrastructure/"
+      }
+    }
+  }
+}

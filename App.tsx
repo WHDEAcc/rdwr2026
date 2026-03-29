@@ -1,124 +1,198 @@
-
-import React, { useState, useEffect, useRef } from 'react';
-import { PROJECTS, SERVICES, PHILOSOPHY, TESTIMONIALS } from './constants';
+import React, { useState, useEffect } from 'react';
+import './i18n';
+import { useTranslation } from 'react-i18next';
+import { useTranslatedTestimonials } from './hooks/useTranslatedData';
+import { useDirection } from './hooks/useDirection';
 import { Project } from './types';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { SocialProof } from './components/SocialProof';
-import { ServiceCard } from './components/ServiceCard';
-import { ProjectCard } from './components/ProjectCard';
-import { PhilosophyItem } from './components/Philosophy';
-import { TestimonialCard } from './components/TestimonialCard';
-import { TrustBadges } from './components/TrustBadges';
-import { LeadCapture } from './components/LeadCapture';
+import { DisciplinesList } from './components/DisciplinesList';
+import { Philosophy } from './components/Philosophy';
 import { Footer } from './components/Footer';
 import { DesignConsultant } from './components/DesignConsultant';
 import { ProjectDetail } from './components/ProjectDetail';
+import { HighlightedProjects } from './components/HighlightedProjects';
+import { About } from './components/About';
+import { People } from './components/People';
+import { SectionReveal } from './components/SectionReveal';
 
 const App: React.FC = () => {
   const [showAI, setShowAI] = useState(false);
+  const [showPeople, setShowPeople] = useState(false);
+  const { t } = useTranslation();
+  const TESTIMONIALS = useTranslatedTestimonials();
+  const { dir } = useDirection();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  // Dark mode state
+  const [isDark, setIsDark] = useState(false);
+
+  // Handle system color scheme preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
+  // Apply dark class to document
+  useEffect(() => {
+    document.documentElement.dir = dir;
+    document.documentElement.lang = document.documentElement.lang || 'en';
+  }, [dir]);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
+
   return (
-    <div className="min-h-screen font-sans selection:bg-sage selection:text-white overflow-x-hidden">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-earth focus:text-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:uppercase focus:tracking-widest">
-        Skip to main content
-      </a>
-      <Header />
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0a] text-black dark:text-white transition-colors duration-300 selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
+      <Header onPeopleClick={() => setShowPeople(true)} />
 
-      <main id="main-content">
-        <Hero onConsultClick={() => setShowAI(true)} />
+      <main>
+        <Hero
+          onConsultClick={() => setShowAI(true)}
+          onProjectClick={setSelectedProject}
+        />
 
-        <SocialProof />
+        <SectionReveal>
+          <DisciplinesList onProjectClick={setSelectedProject} />
+        </SectionReveal>
 
-        {/* Services Section */}
-        <section id="services" className="py-24 px-6 bg-warmBeige">
+        <SectionReveal>
+          <HighlightedProjects onProjectClick={setSelectedProject} />
+        </SectionReveal>
+
+        <SectionReveal>
+          <Philosophy />
+        </SectionReveal>
+
+        {/* Ideas / Thought Leadership — SWA XL Lab inspired */}
+        <SectionReveal>
+        <section className="py-20 md:py-32 px-6 md:px-16 border-t border-black/10 dark:border-white/10">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16 text-center">
-              <h2 className="text-4xl md:text-5xl font-serif text-earth mb-4">Our Services</h2>
-              <p className="text-earth/70 max-w-2xl mx-auto">Masterfully crafted landscapes for every scale and vision.</p>
+            <div className="flex justify-between items-end mb-16">
+              <h2 className="text-xs uppercase tracking-[0.3em] text-muted dark:text-white/50">
+                {t('ideas.sectionTitle')}
+              </h2>
+              <span className="hidden md:block text-xs text-muted dark:text-white/40 tracking-widest uppercase">
+                {t('ideas.viewAll')}
+              </span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {SERVICES.map((s) => (
-                <ServiceCard key={s.title} service={s} />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/10 dark:bg-white/10">
+              {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+                <a
+                  key={i}
+                  href={t(`ideas.items.${i}.url`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white dark:bg-[#111815] p-6 md:p-10 group cursor-pointer hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition-colors duration-300 flex flex-col h-full block"
+                >
+                  <div className="flex justify-between items-start mb-6 gap-4">
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-muted dark:text-white/50 leading-relaxed font-bold">{t(`ideas.items.${i}.topic`)}</span>
+                    <span className="text-[10px] text-muted dark:text-white/30 shrink-0">{t(`ideas.items.${i}.year`)}</span>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-serif font-light leading-snug text-black dark:text-white mb-4 group-hover:text-black/80 dark:group-hover:text-white/80 transition-colors">
+                    {t(`ideas.items.${i}.headline`)}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-muted dark:text-white/50 mb-8 flex-grow">{t(`ideas.items.${i}.teaser`)}</p>
+
+                  <div className="mt-auto border-t border-black/5 dark:border-white/5 pt-6 flex justify-between items-center">
+                    <span className="text-[10px] uppercase tracking-widest text-muted/70 dark:text-white/30 font-mono">
+                      {t(`ideas.items.${i}.source`)}
+                    </span>
+                    <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-muted dark:text-white/40 group-hover:text-black dark:group-hover:text-white transition-colors duration-300">
+                      <span>{t('ideas.readMore')}</span>
+                      <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    </div>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
         </section>
+        </SectionReveal>
 
-        {/* Portfolio Section */}
-        <section id="portfolio" className="py-24 px-6 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-16 flex flex-col md:flex-row items-end justify-between gap-6">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-serif text-earth mb-4">Selected Works</h2>
-                <p className="text-earth/70 max-w-xl">Award-winning landscape architecture projects spanning 14 years of international experience across China, Hong Kong, and beyond.</p>
-              </div>
-              <a href="https://ryondu-portfolio-2025.lovable.app/work" target="_blank" rel="noopener noreferrer" className="text-earth font-medium border-b-2 border-sage pb-1 hover:text-sage transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage">
-                View Full Portfolio
-              </a>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {PROJECTS.map((p) => (
-                <ProjectCard key={p.id} project={p} onClick={() => setSelectedProject(p)} />
-              ))}
-            </div>
+        <SectionReveal>
+        <About />
+        </SectionReveal>
+
+        {/* Testimonials - Horizontal Scroll */}
+        <SectionReveal>
+        <section className="py-32 border-t border-black/10 dark:border-white/10 overflow-hidden">
+          <div className="px-8 md:px-16 mb-16 flex items-center justify-between">
+            <h2 className="text-xs uppercase tracking-[0.3em] text-muted dark:text-white/50">
+              {t('testimonials.sectionTitle', 'Perspectives')}
+            </h2>
+            <span className="hidden md:block text-xs text-muted dark:text-white/30 font-mono">22°N 114°E → 31°N 121°E</span>
           </div>
-        </section>
 
-        {/* Philosophy Section */}
-        <section className="py-24 px-6 bg-earth text-warmBeige">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-serif mb-8 italic">The Verdant Philosophy</h2>
-                <p className="text-warmBeige/80 text-lg mb-12 leading-relaxed">
-                  We believe that a garden is not just a collection of plants, but a living dialogue between architecture and nature. Our designs are born from deep ecological understanding and an unwavering commitment to beauty.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  {PHILOSOPHY.map((item) => (
-                    <PhilosophyItem key={item.title} item={item} />
-                  ))}
+          <div className="flex gap-8 px-8 md:px-16 overflow-x-auto hide-scrollbar pb-12 snap-x drag-cursor">
+            {TESTIMONIALS.map((t, i) => (
+              <div
+                key={i}
+                className={`shrink-0 snap-start ${i % 2 === 0 ? 'w-[280px] md:w-[350px]' : 'w-[280px] md:w-[450px]'
+                  }`}
+              >
+                <div className="text-xs text-muted dark:text-white/30 font-mono uppercase tracking-[0.2em] mb-6">
+                  {['Shenzhen, China', 'Shenzhen, China', 'Dongguan, China'][i] ?? 'China'}
                 </div>
+                <blockquote className="text-lg md:text-2xl font-serif font-light italic leading-tight mb-8">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <cite className="not-italic text-sm text-muted dark:text-white/50 block">
+                  — {t.name}, {t.role}
+                </cite>
               </div>
-              <div className="relative group overflow-hidden rounded-2xl aspect-[4/5]">
-                <img
-                  src="https://images.unsplash.com/photo-1599307767316-776533bb941c?auto=format&fit=crop&q=80&w=1200"
-                  alt="Verdant Vision landscape design process"
-                  loading="lazy"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section id="testimonials" className="py-24 px-6 bg-warmBeige">
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif text-earth mb-4 italic">Living Experiences</h2>
-            <p className="text-earth/70">What our clients say about their new environments.</p>
-          </div>
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((t) => (
-              <TestimonialCard key={t.name} testimonial={t} />
             ))}
+            {/* Padding for end of scroll */}
+            <div className="w-8 shrink-0" />
           </div>
         </section>
+        </SectionReveal>
 
-        <TrustBadges />
-
-        <LeadCapture />
+        {/* Minimal Contact Section */}
+        <SectionReveal>
+        <section id="contact" className="py-48 px-8 md:px-16 flex flex-col items-center justify-center text-center border-t border-black/10 dark:border-white/10">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-normal tracking-tight mb-12">
+            {t('contact.heading_line1', "Let's work")}<br />{t('contact.heading_line2', 'together')}
+          </h2>
+          <a
+            href="mailto:rdxmmcdu@gmail.com"
+            className="text-sm uppercase tracking-[0.2em] hover:text-muted transition-colors border-b border-black dark:border-white pb-1"
+          >
+            rdxmmcdu@gmail.com
+          </a>
+        </section>
+        </SectionReveal>
       </main>
 
       <Footer />
 
-      {/* AI Design Assistant Widget */}
-      <DesignConsultant isOpen={showAI} onClose={() => setShowAI(false)} />
+      {/* Floating AI Button */}
+      <button
+        onClick={() => setShowAI(true)}
+        className="fixed bottom-8 end-8 z-40 w-12 h-12 bg-black dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+        aria-label="Open Design Consultant"
+      >
+        <span className="w-3 h-3 bg-current rounded-full animate-pulse" />
+      </button>
 
-      {/* Project Detail Modal */}
-      <ProjectDetail project={selectedProject} isOpen={!!selectedProject} onClose={() => setSelectedProject(null)} />
+      {/* Modals */}
+      <DesignConsultant isOpen={showAI} onClose={() => setShowAI(false)} />
+      <ProjectDetail
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+      <People isOpen={showPeople} onClose={() => setShowPeople(false)} />
     </div>
   );
 };

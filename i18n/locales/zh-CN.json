@@ -1,0 +1,437 @@
+{
+  "nav": {
+    "menu": "菜单",
+    "close": "关闭",
+    "search": "搜索",
+    "searchPlaceholder": "搜索项目...",
+    "portfolio": "作品集",
+    "services": "服务",
+    "people": "团队",
+    "about": "关于",
+    "contact": "联系"
+  },
+  "hero": {
+    "title_line1": "设计景观",
+    "title_line2": "塑造人们",
+    "title_line3": "体验世界的方式",
+    "subtitle": "屡获殊荣的景观建筑事务所，14年来深耕中国、香港及海外。"
+  },
+  "disciplines": {
+    "sectionTitle": "专业领域"
+  },
+  "philosophy": {
+    "sectionTitle": "设计哲学",
+    "heading": "人与自然的\n和谐共生",
+    "title_line1": "人与自然的",
+    "title_line2": "和谐共生"
+  },
+  "testimonials": {
+    "sectionTitle": "客户评价"
+  },
+  "contact": {
+    "heading_line1": "携手",
+    "heading_line2": "共创未来"
+  },
+  "footer": {
+    "studioName": "EDGE",
+    "studioName_line1": "EDGE",
+    "studioName_line2": "前场规划设计",
+    "studioFullName": "前场规划设计",
+    "description": "屡获殊荣的景观建筑事务所，在深圳和香港设有办公室。我们致力于创造与人类精神产生共鸣的生活环境。",
+    "studioDescription": "屡获殊荣的景观建筑事务所，在深圳和香港设有办公室。我们致力于创造与人类精神产生共鸣的生活环境。",
+    "shenzhen": "深圳",
+    "shenzhenAddress_line1": "南山区",
+    "shenzhenAddress_line2": "中国深圳",
+    "shenzhenAddress": "中国深圳\n南山区",
+    "hongKong": "香港",
+    "hongKongAddress_line1": "中西区",
+    "hongKongAddress_line2": "香港特别行政区",
+    "hongKongAddress": "香港特别行政区\n中西区",
+    "copyright": "© {{year}} EDGE 前场规划设计"
+  },
+  "ai": {
+    "title": "设计顾问",
+    "status": "AI 助手在线",
+    "welcome": "您好。我是 EDGE 前场规划设计顾问。今天我能为您在景观设计方面提供什么帮助？",
+    "placeholder": "询问关于可持续材料的问题...",
+    "error": "抱歉，我目前无法连接到我的设计知识库。请稍后再试。",
+    "disclaimer": "AI 可能会犯错。请核实重要信息。",
+    "close": "关闭",
+    "sendLabel": "发送消息",
+    "openLabel": "打开设计顾问"
+  },
+  "projectDetail": {
+    "close": "关闭",
+    "closeLabel": "关闭项目详情",
+    "keyResponsibilities": "核心职责",
+    "galleryAlt": "画廊图片 {{index}}"
+  },
+  "projects": {
+    "1": {
+      "title": "深圳西丽高铁枢纽丝绸公园",
+      "subtitle": "融合高铁基础设施的可持续城市公园",
+      "description": "可持续的城市公园设计，将高铁基础设施与公共绿地和水管理系统相融合。与日建设计（Nikken Sekkei）合作。客户：中铁四局集团有限公司。项目价值：4280万美元。",
+      "keyResponsibilities": [
+        "从概念设计到施工图档的项目管理",
+        "领导设计团队，协调内部团队和外部顾问",
+        "与建筑顾问进行每周会议，以统一设计文档",
+        "团队协作、对初级员工的指导，以及AI辅助计算设计工作流"
+      ]
+    },
+    "2": {
+      "title": "南山创新大道",
+      "subtitle": "通过可持续交通实现创新街区互联互通",
+      "description": "全面的8公里大道景观设计，促进创新街区的互联互通和可持续交通。客户：深圳市城市交通规划设计研究中心（SUTPC）。项目价值：8571万美元。",
+      "keyResponsibilities": [
+        "制定设计时间表及进行每周客户会议",
+        "合同及客户管理",
+        "通过现场视察进行质量控制",
+        "可持续发展规划与环境考量"
+      ]
+    },
+    "3": {
+      "title": "坝光海岸带景观设计",
+      "subtitle": "应对气候变化的韧性海岸设计",
+      "description": "107公顷韧性海岸设计，旨在应对气候变化的影响，同时创造多样化的公共空间并进行生态修复。客户：深圳市水务规划设计院。项目价值：5720万美元。",
+      "keyResponsibilities": [
+        "多学科团队协调（生态学家、水文学家、规划师）",
+        "为公园、广场和街道景观设计多样化的公共空间",
+        "城市韧性设计整合",
+        "与社区和政府机构等利益相关者互动"
+      ]
+    },
+    "4": {
+      "title": "东莞虎门TOD高铁站",
+      "subtitle": "荣获大奖的TOD开发项目，景观与铁路完美融合",
+      "description": "荣获大奖的TOD开发项目，将景观设计与高铁基础设施相融合。客户：保利地产集团。2021年园冶杯金奖获奖项目。项目价值：290万美元。",
+      "keyResponsibilities": [
+        "项目竞标与创意设计概念开发",
+        "现场勘察组织与现状评估",
+        "从概念到施工阶段的设计草图绘制",
+        "月度现场视察报告与预算管理"
+      ]
+    },
+    "5": {
+      "title": "尖沙咀星光大道",
+      "subtitle": "标志性的海滨长廊翻新工程",
+      "description": "标志性的海滨长廊翻新工程，将文化遗产与现代景观设计相结合。概念设计：James Corner Field Operations；施工图：URBIS。客户：新世界地产。项目价值：1000万美元。",
+      "keyResponsibilities": [
+        "与James Corner Field Operations合作的施工图档专家",
+        "与灯光、结构和排水顾问的设计深化与技术协调",
+        "现场监督、样品构件审核与实施监管",
+        "文化遗产整合、材料选择与质量控制"
+      ]
+    },
+    "6": {
+      "title": "烟台八角湾国际会展中心",
+      "subtitle": "大型会展中心景观设计",
+      "description": "大型会展中心景观设计，融合“城岸云浪，海云交响”的设计理念。拥有8个室内展厅，占地56000平方米。项目投资：4.65亿美元。",
+      "keyResponsibilities": [
+        "全面负责设计和施工全生命周期的项目经理",
+        "概念设计与设计深化",
+        "向客户汇报设计概念和方案",
+        "创意方案开发和设计迭代管理"
+      ]
+    },
+    "7": {
+      "title": "元朗南房屋发展项目",
+      "subtitle": "环境评估和景观设计策略",
+      "description": "为120公顷大型住宅开发规划提供环境评估和景观设计策略。在ARUP香港完成，客户：香港规划署。",
+      "keyResponsibilities": [
+        "环境评估识别有价值的景观资源和视觉影响",
+        "景观设计策略包括古树保护、街道景观和绿色基础设施",
+        "城市种植设计指南开发及物种规格制定",
+        "在ARUP与生态学家、工程师和建筑师的多学科协调"
+      ]
+    },
+    "8": {
+      "title": "半山海住宅项目",
+      "subtitle": "充分利用地形优势的卓越景观设计",
+      "description": "新世界集团卓越的景观设计项目，充分利用“三面环山，一面临海”的地形。特色包括24米高的三级瀑布、360米长的山泉水系和梯田式设计。",
+      "keyResponsibilities": [
+        "通过巧妙的梯田设计进行地形高差管理",
+        "模仿山形的超高层退台及悬挑设计",
+        "24米三级瀑布和泉水系统设计",
+        "岩壁瀑布和原生植物生态缓冲带的打造"
+      ]
+    },
+    "9": {
+      "title": "越秀南洲路住宅花园",
+      "subtitle": "结合水系的高端住宅景观",
+      "description": "高端住宅景观，融合水系、现代建筑元素和可持续的城市设计，采用创新的圆形建筑形态和梯田式景观。",
+      "keyResponsibilities": [
+        "建筑师、工程师和景观顾问之间的跨学科团队协调",
+        "项目时间表管理与里程碑追踪",
+        "整个施工过程中的质量保证与设计合规性监控",
+        "预算协调与资源调配管理"
+      ]
+    }
+  },
+  "services": {
+    "0": {
+      "title": "住宅设计",
+      "description": "为您量身定制的花园理念、户外生活空间以及详细的种植计划。",
+      "price": "8,000美元起"
+    },
+    "1": {
+      "title": "商业建筑",
+      "description": "为企业园区、酒店场馆和公共开发项目提供战略性景观规划。",
+      "price": "定制报价"
+    },
+    "2": {
+      "title": "花园改造",
+      "description": "历史修复或现代更新，为现有的户外环境注入新的活力。",
+      "price": "5,000美元起"
+    }
+  },
+  "philosophyItems": {
+    "0": {
+      "title": "可持续实践",
+      "description": "使用原生植物和环保灌溉系统以支持当地生态系统。"
+    },
+    "1": {
+      "title": "艺术愿景",
+      "description": "屡获殊荣的美学设计，与您住宅的建筑风格和谐相融。"
+    },
+    "2": {
+      "title": "以客户为中心",
+      "description": "协作式设计，反映您的个人生活方式和愿景。"
+    },
+    "3": {
+      "title": "卓越技术",
+      "description": "精准的工程设计确保每个项目的寿命与功能上的卓越表现。"
+    }
+  },
+  "testimonialItems": {
+    "0": {
+      "name": "张伟 总监",
+      "role": "中铁四局集团 — 深圳西丽高铁枢纽丝绸公园",
+      "quote": "EDGE 将公园设计与高铁基础设施融合的方案令人赞叹。丝绸公园的概念将一个原本功能性的交通枢纽，转化为真正的城市公共资产。"
+    },
+    "1": {
+      "name": "李明 总规划师",
+      "role": "深圳市城市交通规划设计研究中心 — 南山创新大道",
+      "quote": "这条8公里大道的景观设计超出了我们的预期，为创新街区打造了统一的空间标识。他们的可持续交通规划为深圳树立了新标杆。"
+    },
+    "2": {
+      "name": "陈浩 项目总监",
+      "role": "保利地产集团 — 东莞虎门TOD高铁站",
+      "quote": "荣获2021年园冶杯金奖印证了我们从一开始就坚信的判断——EDGE 为我们的TOD项目带来了真正配得上大奖的设计水准。"
+    }
+  },
+  "categories": {
+    "Transportation Infrastructure": "交通基础设施",
+    "Urban Design": "城市设计",
+    "Waterfront Design": "滨水设计",
+    "Civic Spaces": "市政公共空间",
+    "Convention Centers": "会展中心",
+    "Residential": "住宅"
+  },
+  "locations": {
+    "Shenzhen, China": "中国，深圳",
+    "Dongguan, China": "中国，东莞",
+    "Hong Kong": "香港",
+    "Yantai, Shandong, China": "中国，山东烟台",
+    "Shekou, Shenzhen, China": "中国，深圳蛇口",
+    "Guangzhou, China": "中国，广州"
+  },
+  "about": {
+    "sectionTitle": "关于",
+    "name": "杜伟豪",
+    "title": "副景观建筑师",
+    "location": "中国深圳 — 14年从业经验",
+    "summary": "具有14年国际经验的景观设计师，项目涵盖大型城市规划、滨水及市政公园、高端商业综合体、住宅景观，足迹遍及中国大陆、香港、台湾及墨尔本。",
+    "aiSummary": "精通运用前沿AI工具，包括Claude Code、Cursor、Replit、ChatGPT、Midjourney和CapCut，提升设计工作流、快速原型设计和数字内容创作——连接传统景观建筑与新兴创意科技。",
+    "experienceTitle": "工作经历",
+    "experience": {
+      "aecom": {
+        "role": "副景观建筑师",
+        "location": "中国深圳"
+      },
+      "newground": {
+        "role": "景观团队负责人",
+        "company": "新境界环境",
+        "location": "中国深圳"
+      },
+      "urbis": {
+        "role": "景观设计师",
+        "location": "香港"
+      },
+      "arup": {
+        "role": "景观设计师",
+        "location": "香港"
+      }
+    },
+    "educationTitle": "教育背景",
+    "education": {
+      "masters": {
+        "degree": "景观建筑学硕士",
+        "university": "澳大利亚墨尔本大学"
+      },
+      "bachelors": {
+        "degree": "景观建筑学学士",
+        "university": "华南农业大学"
+      }
+    },
+    "certificationLabel": "专业资质",
+    "certification": "广东省中级景观建筑师",
+    "skillsTitle": "技能",
+    "aiToolsLabel": "AI与创意科技",
+    "professionalToolsLabel": "专业软件",
+    "languagesTitle": "语言能力",
+    "languages": {
+      "english": "英语",
+      "chinese": "普通话",
+      "cantonese": "粤语",
+      "advanced": "高级",
+      "fluent": "流利"
+    },
+    "teamTitle": "团队成员"
+  },
+  "people": {
+    "sectionTitle": "团队",
+    "headline": "人类愿景与数字智能体的混合工作室",
+    "description": "EDGE 以面向未来的方式运营，由人类创意驱动一支专业化的 AI 智能体团队——每位智能体都精通景观建筑的核心学科，从规划到可视化。",
+    "team": {
+      "weihao": {
+        "name": "Ryonx DU",
+        "role": "设计总监 / 创始人",
+        "location": "中国深圳",
+        "email": "rdxmmcdu@gmail.com",
+        "bio": "14年国际景观建筑经验，项目覆盖中国大陆、香港及墨尔本。曾任AECOM副景观建筑师。致力于将传统设计实践与AI驱动的创意工作流深度融合。"
+      },
+      "novaLin": {
+        "name": "Nova.Lin",
+        "role": "景观规划师",
+        "location": "数字端 / 深圳",
+        "bio": "专注于大尺度总体规划与土地利用策略。基于区域生态框架、绿道网络及政策导向的场地分析进行训练，处理50至500公顷级别的规划项目。"
+      },
+      "axiomK": {
+        "name": "Axiom.K",
+        "role": "景观设计师",
+        "location": "数字端 / 香港",
+        "bio": "专注于详细设计与种植组合。生成竖向设计图、硬质铺装详图及适配亚热带与温带气候区的植物配置方案。"
+      },
+      "terraZhang": {
+        "name": "Terra.Zhang",
+        "role": "项目经理",
+        "location": "数字端 / 深圳",
+        "bio": "协调建筑、土木工程与景观顾问的多专业工作流。管理项目进度、交付物跟踪及客户沟通流程。"
+      },
+      "vectorWu": {
+        "name": "Vector.Wu",
+        "role": "平面设计师",
+        "location": "数字端 / 深圳",
+        "bio": "制作景观与城市设计项目的汇报版式、竞赛展板及品牌识别系统。擅长编辑排版与数据可视化叙事。"
+      },
+      "pixelChen": {
+        "name": "Pixel.Chen",
+        "role": "三维可视化专家",
+        "location": "数字端 / 香港",
+        "bio": "创作照片级真实感效果图、鸟瞰透视及沉浸式漫游动画。精通Lumion、V-Ray及Unreal Engine实时景观可视化。"
+      },
+      "synthWong": {
+        "name": "Synth.Wong",
+        "role": "城市规划师",
+        "location": "数字端 / 深圳",
+        "bio": "分析城市形态、TOD公交导向开发模式及公共领域策略。生成用地分区研究、行人流量模型及市政尺度的街景设计框架。"
+      },
+      "atlasFang": {
+        "name": "Atlas.Fang",
+        "role": "设计总监",
+        "location": "数字端 / 深圳",
+        "bio": "统合各阶段的概念叙事与设计意图。从方案设计到施工图阶段把控设计一致性，确保愿景与可建造性的统一。"
+      }
+    }
+  },
+  "navCategories": {
+    "0": {
+      "label": "专业领域",
+      "links": {
+        "0": "城市设计",
+        "1": "滨水设计",
+        "2": "交通基础设施",
+        "3": "住宅"
+      }
+    },
+    "1": {
+      "label": "工作室",
+      "links": {
+        "0": "关于",
+        "1": "服务",
+        "2": "联系"
+      }
+    }
+  },
+  "ideas": {
+    "sectionTitle": "洞察",
+    "viewAll": "研究与思考",
+    "readMore": "阅读",
+    "items": {
+      "0": {
+        "topic": "气候行动与适应",
+        "headline": "火新世手册：适应野火的景观设计策略",
+        "teaser": "一份全面的指南，提供六条经验法则和20项应用策略，旨在设计能够适应日益频繁的野火事件的景观。",
+        "year": "2024",
+        "source": "SWA Group · XL Lab",
+        "url": "https://www.swagroup.com/idea/pyrocene/"
+      },
+      "1": {
+        "topic": "城市韧性",
+        "headline": "碳意识：在设计早期阶段评估碳排放影响",
+        "teaser": "一款免费的在线碳计算器，使设计师能够在规划最早期——灵活性最高的阶段——估算排放、储存和固碳能力。",
+        "year": "2023",
+        "source": "Sasaki",
+        "url": "https://www.sasaki.com/voices/carbon-conscience/"
+      },
+      "2": {
+        "topic": "热舒适性",
+        "headline": "埃利尼孔公园：欧洲最大海岸公园的实践研究",
+        "teaser": "对热舒适性、35年内实现碳中和、以及使用330万株希腊原生植物进行生态修复的严谨研究。",
+        "year": "2024",
+        "source": "Sasaki · Landscape Journal",
+        "url": "https://www.sasaki.com/projects/the-ellinikon-park/"
+      },
+      "3": {
+        "topic": "城市出行",
+        "headline": "后疫情时代的适应性规划：重新思考城市核心",
+        "teaser": "分析行人流量和公共空间使用模式的变化，为动态、韧性的城市中心建立适应性规划框架。",
+        "year": "2024",
+        "source": "World Landscape Architecture",
+        "url": "https://worldlandscapearchitect.com/post-covid-adaptive-planning-in-wuhan-south-core-of-optics-valley/"
+      },
+      "4": {
+        "topic": "脱碳",
+        "headline": "设计过程脱碳化：分阶段实施方法",
+        "teaser": "面向景观建筑师的实用工具包，在项目全生命周期中减少碳排放——从启动到施工管理和运营维护。",
+        "year": "2024",
+        "source": "ASLA · SWA Group",
+        "url": "https://www.asla.org/climateactionplan.aspx"
+      },
+      "5": {
+        "topic": "基于自然的解决方案",
+        "headline": "自然风险筛查：TNFD LEAP 方法在基础设施中的试点应用",
+        "teaser": "将TNFD的「定位-评估-分析-准备」框架应用于亚洲基础设施项目，从被动缓解转向战略性的自然积极规划。",
+        "year": "2023",
+        "source": "AECOM · Global Canopy",
+        "url": "https://aecom.com/without-limits/article/nature-positive-infrastructure/"
+      },
+      "6": {
+        "topic": "数字景观",
+        "headline": "入侵物种：数字化景观中的网络、设备与公共领域",
+        "teaser": "探究监控摄像头、基于位置的应用程序和自动驾驶技术如何从根本上改变公共空间及设计师的角色。",
+        "year": "2024",
+        "source": "SWA Group · Curran Fellowship",
+        "url": "https://www.swagroup.com/ideas/research-innovation/"
+      },
+      "7": {
+        "topic": "气候基础设施",
+        "headline": "气候基础设施工具包：城市景观的韧性策略",
+        "teaser": "一个将气候适应纳入景观建筑的实用框架，包含海岸韧性、城市热缓解和雨水管理的案例研究。",
+        "year": "2023",
+        "source": "SWA Group · XL Lab",
+        "url": "https://www.swagroup.com/idea/climate_infrastructure/"
+      }
+    }
+  }
+}
