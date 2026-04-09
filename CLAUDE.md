@@ -46,6 +46,10 @@ npx wrangler pages deploy dist --project-name edge-landscape --commit-dirty=true
 
 # i18n migration helper (one-shot, already applied)
 node patch_wave3.cjs
+
+# CV + Portfolio PDF generation (Arup application)
+node generate-cv-v3.mjs              # v3: 26-page portrait-only layout (~9MB)
+node generate-cv-v4.mjs              # v4: 53-page mixed portrait/landscape layout (~13MB)
 ```
 
 ---
@@ -63,6 +67,10 @@ node patch_wave3.cjs
 ├── vite.config.ts             # Vite config (port 3000, path aliases, env injection)
 ├── playwright.config.ts       # 3 viewports: Desktop, Mobile (iPhone 13), iPad Pro 11
 ├── patch_wave3.cjs            # One-shot i18n migration script (string-replace transforms)
+├── cv-portfolio-v3.html       # v3: 26-page portrait-only CV+Portfolio (all images from CDN)
+├── generate-cv-v3.mjs         # v3: Playwright page.pdf() → Ghostscript compress
+├── cv-portfolio-v4.html       # v4: 53-page mixed portrait/landscape CV+Portfolio
+├── generate-cv-v4.mjs         # v4: Screenshot-based PDF generation (bypasses page.pdf() image bug)
 ├── components/
 │   ├── Hero.tsx               # Text-mask hero + centered slideshow carousel (17KB)
 │   ├── SectionReveal.tsx      # Scroll-triggered reveal (clipPath desktop / fade mobile)
@@ -257,6 +265,57 @@ After config changes (e.g., changing Vite port), old processes may linger on the
 ### ⚠️ P2: Hero Slide Centering Math
 
 `getTranslateX` in `Hero.tsx` uses a simplified model: `leftEdge = activeIndex * inactiveWidth`. This works because all non-active slides are the same width. If you ever add variable inactive widths, the centering math must sum all preceding widths individually.
+
+### ⚠️ P2: Playwright PDF — file:// Cannot Embed External Images
+
+When generating PDF via `page.pdf()`, loading the HTML via `file://` protocol causes Chromium to silently fail on external CDN image embedding. The images load and display in the browser context, but are **not embedded** in the exported PDF.
+
+**Fix**: `generate-cv-v3.mjs` spins up a temporary `http.createServer()` on a random port, serves the HTML via HTTP, then generates the PDF. This allows Chromium to properly fetch and embed cross-origin images.
+
+### ⚠️ P2: Playwright PDF Page Overflow (296.8mm, Not 297mm)
+
+Setting `.page` height to exactly `297mm` (A4) causes Playwright to generate extra blank pages due to subpixel rounding in print layout. Using `296.8mm` provides a 0.2mm buffer that prevents overflow while being imperceptible.
+
+---
+
+## CV + Portfolio PDF
+
+Self-contained A4 documents for Arup Senior Landscape Designer application. Snohetta/SWA/Sasaki design aesthetic: black/white/grey + sage `#8FA79A` accent.
+
+### v3 — Portrait-Only Layout (`cv-portfolio-v3.html`)
+
+**26 pages**, all portrait orientation (210mm × 297mm).
+
+**Page structure**: Cover (1) + CV (4) + Portfolio Divider (1) + 9 Projects × 2pp (18) + Awards (1) + Contact (1)
+
+**Generation**: `node generate-cv-v3.mjs` → HTTP serve → `page.pdf()` → Ghostscript `/printer` compression → **~9MB**
+
+**Known issue**: Images embed in raw PDF (70MB) but don't display in compressed output — `page.pdf()` image rendering bug.
+
+### v4 — Mixed Landscape/Portrait Layout (`cv-portfolio-v4.html`) ✅ CURRENT
+
+**53 pages**, mixed orientation for better visual impact.
+
+**Page structure**:
+- Portrait (8 pages): Cover (1) + CV (4) + Portfolio Divider (1) + Awards (1) + Contact (1)
+- Landscape (45 pages): 9 Projects × 5pp each
+  - Page 1: Brief (text-only, project number watermark + description + metadata)
+  - Page 2: Hero image (full-screen) + Key Responsibilities overlay (gradient background, 2-column grid)
+  - Pages 3-5: Gallery images (full-screen, super clean, no text)
+
+**Generation**: `node generate-cv-v4.mjs` → Screenshot-based approach (bypasses `page.pdf()` bug) → img2pdf segments → Ghostscript merge/compress → **~13MB**
+
+**Project order** (HK first): Avenue of Stars → Yuen Long South → Xili Railway → Nanshan Blvd → Baguang Coast → Humen TOD → Yantai Convention → Mountain Blue → Yuexiu Nanzhou
+
+**Data sources**: `constants.ts` (image URLs), `i18n/locales/en.json` (text), external CV markdown
+
+**Technical notes**:
+- v4 uses Playwright `element.screenshot()` at `deviceScaleFactor: 2` (~192 DPI)
+- 36 images downloaded as base64 data URIs, embedded in HTML before serving
+- Orientation detected via `.landscape` class on `.page` elements
+- 3 segments created: portrait (6) → landscape (45) → portrait (2)
+- Portrait pages: `img2pdf -S 210mmx297mm`
+- Landscape pages: `img2pdf -S 297mmx210mm`
 
 ---
 

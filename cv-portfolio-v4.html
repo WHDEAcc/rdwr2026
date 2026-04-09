@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weihao DU — CV + Portfolio v4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+img{display:block}
+@page{size:210mm 297mm;margin:0}
+:root{
+  --sage:#8FA79A;--beige:#F5F0E8;--black:#000;--body:#333;
+  --caption:#666;--light:#999;--white:#FFF;
+  --serif:'Instrument Serif',serif;
+  --body-serif:'Cormorant Garamond',serif;
+  --sans:'Inter',sans-serif;
+}
+html,body{margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@media screen{
+  body{background:#E0E0E0;padding:10mm 0}
+  .page{margin:0 auto 8mm;box-shadow:0 1px 6px rgba(0,0,0,0.12)}
+}
+
+/* ── Portrait Page ── */
+.page{
+  width:210mm;height:296.8mm;position:relative;overflow:hidden;
+  background:#fff;page-break-after:always;break-after:page;break-inside:avoid;
+}
+.page:last-child{page-break-after:auto;break-after:auto}
+
+/* ── Landscape Page ── */
+.page.landscape{width:297mm;height:209.8mm}
+
+/* ── Page Number ── */
+.pn{position:absolute;bottom:5mm;right:12mm;font-family:var(--sans);font-size:9pt;font-weight:300;color:var(--light);z-index:5}
+.pn-white{color:rgba(255,255,255,0.4)}
+
+/* ── CV Content ── */
+.cv-pad{padding:12mm 15mm}
+.sage-rule{border:none;border-top:0.4mm solid var(--sage);margin:0}
+.cols{display:flex;gap:10mm}
+.col-60{flex:0 0 60%;max-width:60%}
+.col-40{flex:0 0 38%;max-width:38%}
+.sec-h{font-family:var(--serif);font-size:22pt;font-weight:400;color:var(--black);margin-bottom:6mm;letter-spacing:-0.02em}
+.sub-h{font-family:var(--sans);font-size:14pt;font-weight:600;color:var(--black);margin-bottom:2mm}
+.body-t{font-family:var(--body-serif);font-size:13pt;font-weight:400;color:var(--body);line-height:1.55}
+.cap-t{font-family:var(--sans);font-size:11pt;font-weight:400;color:var(--caption);line-height:1.5}
+.label-sage{font-family:var(--sans);font-size:11pt;font-weight:400;color:var(--sage);letter-spacing:0.03em}
+
+.work-entry{margin-bottom:6mm}
+.work-entry .period{font-family:var(--sans);font-size:10pt;color:var(--sage);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1mm}
+.work-entry .role{font-family:var(--sans);font-size:13pt;font-weight:600;color:var(--black);margin-bottom:0.5mm}
+.work-entry .company{font-family:var(--sans);font-size:11pt;color:var(--caption);margin-bottom:2mm}
+.work-entry .desc{font-family:var(--body-serif);font-size:12pt;color:var(--body);line-height:1.5}
+.work-entry ul{font-family:var(--body-serif);font-size:12pt;color:var(--body);line-height:1.5;padding-left:5mm;margin-top:1.5mm}
+.work-entry ul li{margin-bottom:1mm}
+
+.proj-index{list-style:none;padding:0;margin-top:10mm}
+.proj-index li{display:flex;align-items:baseline;padding:3mm 0;border-bottom:0.2mm solid rgba(0,0,0,0.08)}
+.proj-index .num{font-family:var(--sans);font-size:11pt;color:var(--sage);width:12mm;flex-shrink:0}
+.proj-index .title{font-family:var(--body-serif);font-size:14pt;color:var(--black);flex:1}
+.proj-index .loc{font-family:var(--sans);font-size:10pt;color:var(--caption);text-align:right;flex-shrink:0;margin-left:4mm}
+
+.skills-grid{display:flex;flex-wrap:wrap;gap:2mm 6mm;margin-top:2mm}
+.skill-tag{font-family:var(--sans);font-size:10pt;color:var(--caption);padding:1.5mm 3mm;border:0.3mm solid #ddd;display:inline-block}
+.other-proj{list-style:none;padding:0}
+.other-proj li{font-family:var(--body-serif);font-size:11.5pt;color:var(--body);padding:1.5mm 0;border-bottom:0.15mm solid #eee;display:flex;justify-content:space-between}
+.other-proj .yr{font-family:var(--sans);font-size:10pt;color:var(--caption)}
+
+/* ═══ PROJECT BRIEF PAGE ═══ */
+.brief-page{display:flex;align-items:center;padding:0 35mm}
+.brief-watermark{
+  position:absolute;top:10mm;right:25mm;
+  font-family:var(--serif);font-size:140pt;font-weight:400;
+  color:rgba(0,0,0,0.04);line-height:1;letter-spacing:-0.04em;
+  pointer-events:none;
+}
+.brief-cat{
+  font-family:var(--sans);font-size:10pt;color:var(--sage);
+  letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6mm;
+}
+.brief-title{
+  font-family:var(--serif);font-size:38pt;font-weight:400;
+  color:var(--black);line-height:1.1;letter-spacing:-0.02em;margin-bottom:4mm;
+}
+.brief-sub{
+  font-family:var(--body-serif);font-size:15pt;font-style:italic;
+  color:var(--caption);margin-bottom:10mm;
+}
+.brief-desc{
+  font-family:var(--body-serif);font-size:13pt;color:var(--body);
+  line-height:1.65;max-width:210mm;margin-bottom:12mm;
+}
+.brief-meta{
+  display:flex;gap:3mm;align-items:center;flex-wrap:wrap;
+  padding-top:5mm;border-top:0.3mm solid rgba(0,0,0,0.08);
+}
+.brief-meta span{font-family:var(--sans);font-size:10pt;color:var(--caption)}
+.brief-meta .sep{color:#ccc;margin:0 1mm}
+
+/* ═══ FULL-SCREEN IMAGE ═══ */
+.fullimg{
+  position:absolute;top:0;left:0;
+  width:297mm;height:209.8mm;object-fit:cover;
+}
+
+/* ═══ KEY RESPONSIBILITIES OVERLAY ═══ */
+.resp-overlay{
+  position:absolute;bottom:0;left:0;right:0;z-index:2;
+  padding:25mm 25mm 12mm;
+  background:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.75) 100%);
+}
+.resp-overlay .resp-label{
+  font-family:var(--sans);font-size:9pt;font-weight:500;
+  color:var(--sage);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4mm;
+}
+.resp-overlay ul{
+  list-style:none;padding:0;
+  display:grid;grid-template-columns:1fr 1fr;gap:2mm 20mm;
+}
+.resp-overlay ul li{
+  font-family:var(--sans);font-size:9.5pt;font-weight:300;
+  color:rgba(255,255,255,0.92);line-height:1.5;
+  padding-left:3mm;position:relative;
+}
+.resp-overlay ul li::before{
+  content:'';position:absolute;left:0;top:2.2mm;
+  width:1.2mm;height:1.2mm;background:var(--sage);border-radius:50%;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE 1 — COVER (Portrait) ══════════════ -->
+<div class="page" style="background:#000">
+  <div style="position:absolute;inset:0;background:url('https://ryondu-portfolio-2025.lovable.app/lovable-uploads/5b747fb7-14f1-4a41-b1eb-fda784cff9f1.png') center/cover no-repeat"></div>
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.72)"></div>
+  <div style="position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 20mm">
+    <div style="margin-bottom:6mm">
+      <div style="font-family:var(--sans);font-size:10pt;color:var(--sage);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4mm">Curriculum Vitae + Portfolio</div>
+      <h1 style="font-family:var(--serif);font-size:72pt;color:#fff;letter-spacing:-0.03em;line-height:0.95;margin-bottom:5mm">WEIHAO DU</h1>
+      <div style="font-family:var(--sans);font-size:18pt;color:var(--sage);font-weight:400;margin-bottom:10mm">Landscape Architect</div>
+    </div>
+    <div style="font-family:var(--body-serif);font-size:13pt;color:rgba(255,255,255,0.75);line-height:1.7;max-width:120mm">
+      <div>Master of Landscape Architecture, University of Melbourne</div>
+      <div>14 Years Experience — Hong Kong, Mainland China, Melbourne</div>
+      <div>ARUP Hong Kong &middot; URBIS Hong Kong &middot; AECOM Shenzhen</div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:10mm;right:20mm;z-index:1;text-align:right;font-family:var(--sans);font-size:10pt;color:rgba(255,255,255,0.55);line-height:1.7">
+    <div>rdxmmcdu@gmail.com</div>
+    <div>edge-landscape.pages.dev</div>
+    <div>Shenzhen, China</div>
+  </div>
+</div>
+
+<!-- ══════════════ PAGE 2 — CAREER SUMMARY (Portrait) ══════════════ -->
+<div class="page cv-pad">
+  <div class="label-sage" style="margin-bottom:6mm">WEIHAO DU</div>
+  <hr class="sage-rule" style="margin-bottom:8mm">
+  <div class="cols">
+    <div class="col-60">
+      <h2 class="sec-h">Career Summary</h2>
+      <p class="body-t" style="margin-bottom:6mm">Internationally experienced Landscape Designer with 14 years of diverse projects including large-scale city planning, waterfront and civic parks, high-end commercial complexes, and residential landscapes across mainland China, Hong Kong, Taiwan, and Melbourne.</p>
+      <p class="body-t" style="margin-bottom:6mm">Proven track record in managing internal teams and external stakeholders including clients, sub-consultants, suppliers, and on-site construction teams. Experienced in leading projects from conceptual design through construction documentation to site supervision.</p>
+      <p class="body-t">Specialized in transit-oriented developments, coastal resilience design, urban public realm, and high-end residential landscapes. Adept at coordinating multi-disciplinary teams of ecologists, engineers, urban planners, and architects to deliver integrated design solutions.</p>
+    </div>
+    <div class="col-40">
+      <h3 class="sub-h" style="margin-bottom:4mm">Education</h3>
+      <div style="margin-bottom:6mm">
+        <div class="cap-t" style="color:var(--sage);font-size:10pt;margin-bottom:1mm">2011</div>
+        <div class="sub-h" style="font-size:12pt;margin-bottom:0.5mm">Master of Landscape Architecture</div>
+        <div class="cap-t">The University of Melbourne, Australia</div>
+      </div>
+      <div style="margin-bottom:8mm">
+        <div class="cap-t" style="color:var(--sage);font-size:10pt;margin-bottom:1mm">2007</div>
+        <div class="sub-h" style="font-size:12pt;margin-bottom:0.5mm">Bachelor of Landscape Architecture</div>
+        <div class="cap-t">South China Agricultural University</div>
+      </div>
+      <h3 class="sub-h" style="margin-bottom:3mm">Certification</h3>
+      <p class="cap-t" style="margin-bottom:8mm">Guangdong Province Intermediate<br>Landscape Architect, China</p>
+      <h3 class="sub-h" style="margin-bottom:3mm">Languages</h3>
+      <table style="font-family:var(--sans);font-size:11pt;color:var(--body);border-collapse:collapse;width:100%">
+        <tr><td style="padding:1.5mm 0">English</td><td style="padding:1.5mm 0;color:var(--caption)">Advanced</td></tr>
+        <tr><td style="padding:1.5mm 0">Chinese (Mandarin)</td><td style="padding:1.5mm 0;color:var(--caption)">Fluent</td></tr>
+        <tr><td style="padding:1.5mm 0">Cantonese</td><td style="padding:1.5mm 0;color:var(--caption)">Fluent</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="pn">2</div>
+</div>
+
+<!-- ══════════════ PAGE 3 — WORK HISTORY (Portrait) ══════════════ -->
+<div class="page cv-pad">
+  <h2 class="sec-h">Work Experience</h2>
+  <div class="work-entry"><div class="period">2012 — 2015</div><div class="role">Landscape Designer</div><div class="company">ARUP, Hong Kong</div><div class="desc">Planning and Engineering Study for Yuen Long South Residential Development (120 HA) for the Hong Kong Planning Department. Environmental assessment identifying valuable landscape resources and visual impact. Landscape design strategy including tree preservation, streetscape, and green infrastructure. Multi-disciplinary coordination with ecologists, engineers, and architects.</div></div>
+  <div class="work-entry"><div class="period">2015</div><div class="role">Landscape Designer</div><div class="company">URBIS, Hong Kong</div><div class="desc">Avenue of Stars, Tsim Sha Tsui (1 km, $10M USD) for New World Property. Construction documentation specialist in collaboration with James Corner Field Operations. Design development and technical coordination with lighting, structure, and drainage consultants. Site supervision, mock-up component review, and quality control.</div></div>
+  <div class="work-entry"><div class="period">2018 — 2023</div><div class="role">Associate Landscape Architect</div><div class="company">AECOM, Shenzhen, China</div><div class="desc" style="margin-bottom:2mm">Led multiple large-scale projects as project manager and senior designer:</div><ul><li><strong>Xili Railway Station Hub Silk Park</strong> — 42 HA, $42.8M USD. Project management from concept to construction documentation, coordinating with Nikken Sekkei.</li><li><strong>Nanshan Innovation Boulevard</strong> — 8 km, $85.7M USD. Design schedule management, client coordination, sustainability planning.</li><li><strong>Baguang Coastal Landscape</strong> — 107 HA, $57.2M USD. Multi-disciplinary coordination for resilient coastal design.</li><li><strong>Dongguan Humen TOD</strong> — 14 HA, $2.9M USD. 2021 Yuanye Award Gold Prize winner.</li></ul></div>
+  <div class="work-entry"><div class="period">2016 — 2018</div><div class="role">Landscape Team Leader</div><div class="company">New Ground Environment Co., Ltd, Shenzhen, China</div><div class="desc">Chief designer for Chongqing OCT Park (189 HA, $14.2M USD) and Baoan Waterfront Park (120 HA, $85.7M USD). Led design strategy, sponge city integration, and coordinated with SWA consultants. Weekly site supervision and stakeholder engagement.</div></div>
+  <div class="pn">3</div>
+</div>
+
+<!-- ══════════════ PAGE 4 — ADDITIONAL PROJECTS (Portrait) ══════════════ -->
+<div class="page cv-pad">
+  <h2 class="sec-h">Additional Hong Kong Projects</h2>
+  <div style="margin-bottom:8mm">
+    <div class="work-entry"><div class="sub-h" style="font-size:12pt">NE New Territories New Development Areas</div><div class="cap-t">Hong Kong Planning Department, 2015 — Environmental assessment and landscape planning</div></div>
+    <div class="work-entry"><div class="sub-h" style="font-size:12pt">Queensway Plaza Redevelopment, Admiralty</div><div class="cap-t">Hong Kong, 2015 — Planning and design study for public realm improvement</div></div>
+    <div class="work-entry"><div class="sub-h" style="font-size:12pt">Tai Po Town Lot 214 Residential</div><div class="cap-t">Hong Kong, 2015 — High-end residential landscape design</div></div>
+  </div>
+  <h2 class="sec-h">Other Notable Projects</h2>
+  <ul class="other-proj">
+    <li><span>Yantai Bajiao Bay International Convention Centre</span><span class="yr">2023</span></li>
+    <li><span>Mountain and Blues Residential, Shekou, Shenzhen</span><span class="yr">2023</span></li>
+    <li><span>AI Town Park Landscape Design, Longgang</span><span class="yr">2023</span></li>
+    <li><span>Yuexiu Garden, Guangzhou</span><span class="yr">2022</span></li>
+    <li><span>Buji River Urban Renewal Landscape, Shenzhen</span><span class="yr">2021</span></li>
+    <li><span>Dongguan Water Town Landscape Planning</span><span class="yr">2020</span></li>
+    <li><span>Chongqing OCT Park</span><span class="yr">2017</span></li>
+    <li><span>Changde Residential Sponge City, Hunan</span><span class="yr">2017</span></li>
+    <li><span>Hengtang Water Park, Pingshan, Shenzhen</span><span class="yr">2016</span></li>
+    <li><span>Baoan Waterfront Park, Shenzhen (with SWA)</span><span class="yr">2016</span></li>
+    <li><span>Taoyuan Airport Metropolis, Taiwan</span><span class="yr">2014</span></li>
+    <li><span>Car Park Retrofitting Project, Melbourne, Australia</span><span class="yr">2011</span></li>
+  </ul>
+  <div class="pn">4</div>
+</div>
+
+<!-- ══════════════ PAGE 5 — SKILLS + PHILOSOPHY (Portrait) ══════════════ -->
+<div class="page cv-pad">
+  <h2 class="sec-h">Professional Skills</h2>
+  <div style="margin-bottom:6mm"><div class="sub-h" style="font-size:12pt;margin-bottom:3mm">Design Software</div><div class="skills-grid"><span class="skill-tag">AutoCAD</span><span class="skill-tag">SketchUp</span><span class="skill-tag">Rhino</span><span class="skill-tag">Adobe Creative Suite</span><span class="skill-tag">Lumion</span><span class="skill-tag">V-Ray</span><span class="skill-tag">Enscape</span><span class="skill-tag">Revit (BIM)</span><span class="skill-tag">ArcGIS</span></div></div>
+  <div style="margin-bottom:8mm"><div class="sub-h" style="font-size:12pt;margin-bottom:3mm">AI &amp; Creative Technology</div><p class="body-t" style="font-size:12pt">Proficient in AI tools (Claude Code, Midjourney, ChatGPT) for design workflows and rapid prototyping. Developer of edge-landscape.pages.dev, an interactive portfolio platform built with React + TypeScript. Experienced in computational design and BIM integration for complex infrastructure projects.</p></div>
+  <hr class="sage-rule" style="margin:8mm 0">
+  <h2 class="sec-h">Design Philosophy</h2>
+  <p class="body-t" style="font-size:14pt;line-height:1.65;max-width:160mm">I believe landscape architecture is fundamentally about creating places that are ecologically resilient, culturally meaningful, and socially inclusive. Every project is an opportunity to mediate between natural systems and human aspiration — working with terrain, water, vegetation, and climate to shape spaces that endure.</p>
+  <p class="body-t" style="font-size:14pt;line-height:1.65;max-width:160mm;margin-top:5mm">My practice is grounded in cross-disciplinary collaboration. The most impactful landscapes emerge when designers work alongside ecologists, engineers, urban planners, and communities from the earliest stages — ensuring that every decision serves both environmental performance and human experience.</p>
+  <div class="pn">5</div>
+</div>
+
+<!-- ══════════════ PAGE 6 — PORTFOLIO DIVIDER (Portrait) ══════════════ -->
+<div class="page" style="background:var(--beige)">
+  <div style="padding:40mm 20mm 12mm">
+    <div class="label-sage" style="margin-bottom:6mm;letter-spacing:0.15em">PORTFOLIO</div>
+    <h2 style="font-family:var(--serif);font-size:56pt;color:var(--black);letter-spacing:-0.03em;line-height:1;margin-bottom:4mm">Selected Works</h2>
+    <p style="font-family:var(--body-serif);font-size:14pt;color:var(--caption)">Nine projects across Hong Kong, Shenzhen, and Greater China</p>
+    <ul class="proj-index">
+      <li><span class="num">01</span><span class="title">Avenue of Stars, Tsim Sha Tsui</span><span class="loc">Hong Kong</span></li>
+      <li><span class="num">02</span><span class="title">Yuen Long South Residential Development</span><span class="loc">Hong Kong</span></li>
+      <li><span class="num">03</span><span class="title">Shenzhen Xili Railway Station Hub Silk Park</span><span class="loc">Shenzhen</span></li>
+      <li><span class="num">04</span><span class="title">Nanshan Innovation Boulevard</span><span class="loc">Shenzhen</span></li>
+      <li><span class="num">05</span><span class="title">Baguang Coastal Landscape Design</span><span class="loc">Shenzhen</span></li>
+      <li><span class="num">06</span><span class="title">Dongguan Humen TOD Railway Station</span><span class="loc">Dongguan</span></li>
+      <li><span class="num">07</span><span class="title">Yantai Bajiao Bay Convention Center</span><span class="loc">Yantai</span></li>
+      <li><span class="num">08</span><span class="title">Mountain and Blue Residential Project</span><span class="loc">Shekou</span></li>
+      <li><span class="num">09</span><span class="title">Yuexiu Nanzhou Road Residential Garden</span><span class="loc">Guangzhou</span></li>
+    </ul>
+  </div>
+  <div class="pn">6</div>
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 01 — Avenue of Stars, Tsim Sha Tsui  (Pages 7–11)    ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">01</div>
+  <div>
+    <div class="brief-cat">Public Realm &amp; Community</div>
+    <div class="brief-title">Avenue of Stars,<br>Tsim Sha Tsui</div>
+    <div class="brief-sub">Iconic waterfront promenade renovation</div>
+    <p class="brief-desc">Iconic waterfront promenade renovation combining cultural heritage with modern landscape design. Concept design by James Corner Field Operations; construction documentation by URBIS. The project transformed the Victoria Harbour waterfront into a world-class public destination celebrating Hong Kong's cinematic legacy.</p>
+    <div class="brief-meta">
+      <span>Hong Kong</span><span class="sep">|</span>
+      <span>1 kilometre</span><span class="sep">|</span>
+      <span>2015</span><span class="sep">|</span>
+      <span>Client: New World Property</span><span class="sep">|</span>
+      <span>$10M USD</span>
+    </div>
+  </div>
+  <div class="pn">7</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/5b747fb7-14f1-4a41-b1eb-fda784cff9f1.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Construction documentation specialist in collaboration with James Corner Field Operations</li>
+      <li>Design development and technical coordination with lighting, structure, and drainage consultants</li>
+      <li>Site supervision, mock-up component review, and implementation oversight</li>
+      <li>Cultural heritage integration, materials selection, and quality control</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">8</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/349ef80e-83fc-4391-9cb9-1036d29d8a7e.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/4022239a-f4fc-4504-a3b2-69b547f646ee.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/a2ee90f3-92a0-4362-8451-a66e230ebbe4.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 02 — Yuen Long South  (Pages 12–16)                   ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">02</div>
+  <div>
+    <div class="brief-cat">Living Environments</div>
+    <div class="brief-title">Yuen Long South<br>Residential Development</div>
+    <div class="brief-sub">Environmental assessment and landscape design strategy</div>
+    <p class="brief-desc">Environmental assessment and landscape design strategy for large-scale 120-hectare residential development planning. Completed at ARUP Hong Kong for the Hong Kong Planning Department. The project established comprehensive landscape frameworks balancing urban development with ecological preservation in the New Territories.</p>
+    <div class="brief-meta">
+      <span>Hong Kong</span><span class="sep">|</span>
+      <span>120 hectares</span><span class="sep">|</span>
+      <span>2012 &ndash; 2015</span><span class="sep">|</span>
+      <span>Client: Hong Kong Planning Department</span>
+    </div>
+  </div>
+  <div class="pn">12</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/3c11fe38-33ac-4670-8cbf-87c0619facaa.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Environmental assessment identifying valuable landscape resources and visual impact</li>
+      <li>Landscape design strategy including tree preservation, streetscape, and green infrastructure</li>
+      <li>Urban planting design guideline development with species specification</li>
+      <li>Multi-disciplinary coordination with ecologists, engineers, and architects at ARUP</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">13</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/c37fbafd-2d22-4029-a3a2-11074c4008e8.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/241ba0f5-38a3-4550-a163-43854d1eebca.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/529da3e1-5837-4ad4-a77a-3b728809ad84.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 03 — Xili Railway Station Hub  (Pages 17–21)          ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">03</div>
+  <div>
+    <div class="brief-cat">Urban Mobility &amp; Transit</div>
+    <div class="brief-title">Shenzhen Xili Railway<br>Station Hub Silk Park</div>
+    <div class="brief-sub">Sustainable urban park integrating high-speed railway infrastructure</div>
+    <p class="brief-desc">Sustainable urban park design integrating high-speed railway infrastructure with public green spaces and water management systems. Collaborated with Nikken Sekkei as architectural consultant. Client: China 4th Railway Civil Engineering Group. A landmark project demonstrating how transit infrastructure can coexist with vibrant public landscapes.</p>
+    <div class="brief-meta">
+      <span>Shenzhen, China</span><span class="sep">|</span>
+      <span>42 hectares</span><span class="sep">|</span>
+      <span>2022 &ndash; ongoing</span><span class="sep">|</span>
+      <span>$42.8M USD</span>
+    </div>
+  </div>
+  <div class="pn">17</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/d6ae6425-624a-4cd7-8ea7-5b97b73a8e87.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Project management from conceptual design to construction documentation</li>
+      <li>Design leadership coordinating internal teams and external consultants</li>
+      <li>Weekly meetings with architectural consultants to align design documents</li>
+      <li>Team collaboration, mentorship of junior staff, and computational design workflows</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">18</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/dfa276b5-718e-4883-98a4-53b94f788872.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/155051fa-56b8-4f62-86c7-b4401a686cdf.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/dc96336c-9355-4209-a420-b79a39fcb05e.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 04 — Nanshan Innovation Boulevard  (Pages 22–26)       ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">04</div>
+  <div>
+    <div class="brief-cat">Civic Vitality</div>
+    <div class="brief-title">Nanshan Innovation<br>Boulevard</div>
+    <div class="brief-sub">Innovation district connectivity through sustainable transportation</div>
+    <p class="brief-desc">Comprehensive 8-kilometre boulevard landscape design promoting innovation district connectivity and sustainable transportation. Client: SUTPC (Shenzhen Urban Transport Planning Center). The project established a cohesive green corridor linking Shenzhen's innovation hubs with pedestrian-priority streetscape design.</p>
+    <div class="brief-meta">
+      <span>Shenzhen, China</span><span class="sep">|</span>
+      <span>8 kilometres</span><span class="sep">|</span>
+      <span>2018 &ndash; 2020</span><span class="sep">|</span>
+      <span>Client: SUTPC</span><span class="sep">|</span>
+      <span>$85.7M USD</span>
+    </div>
+  </div>
+  <div class="pn">22</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/c685f113-2e54-4e7b-99fd-6c2991b528df.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Design schedule creation and weekly client meetings</li>
+      <li>Contract and client management</li>
+      <li>Quality control through site inspections</li>
+      <li>Sustainability planning and environmental considerations</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">23</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/d312aa57-bf9c-401f-9357-ff0d97925267.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/ba1ff681-4ec0-497d-8f39-0462279e9016.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/c3967c73-9ac2-46ff-94fa-2ad992edf47f.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 05 — Baguang Coastal  (Pages 27–31)                    ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">05</div>
+  <div>
+    <div class="brief-cat">Ecological Resilience</div>
+    <div class="brief-title">Baguang Coastal<br>Landscape Design</div>
+    <div class="brief-sub">Resilient coastal design addressing climate change</div>
+    <p class="brief-desc">Resilient coastal design spanning 107 hectares, addressing climate change impacts while creating diverse public spaces and ecological restoration. Client: Shenzhen Water and Planning Design Group. The project balances shoreline protection with accessible public recreation along Shenzhen's eastern coastline.</p>
+    <div class="brief-meta">
+      <span>Shenzhen, China</span><span class="sep">|</span>
+      <span>107 hectares</span><span class="sep">|</span>
+      <span>2019 &ndash; 2021</span><span class="sep">|</span>
+      <span>$57.2M USD</span>
+    </div>
+  </div>
+  <div class="pn">27</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/755d5044-91cd-4284-b93f-e6fb31cb7ce5.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Multi-disciplinary team coordination (ecologists, hydrologists, planners)</li>
+      <li>Diverse public space design for parks, plazas, streetscapes</li>
+      <li>City resilience design integration</li>
+      <li>Stakeholder engagement with communities and government agencies</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">28</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/8a5f775d-334f-44aa-a44d-d91c34ceb8f0.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/43fe5b2b-3e53-4dd6-be76-8f1695af1a65.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/dee048ed-88d7-41c3-8651-117076549a66.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 06 — Dongguan Humen TOD  (Pages 32–36)                ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">06</div>
+  <div>
+    <div class="brief-cat">Urban Mobility &amp; Transit</div>
+    <div class="brief-title">Dongguan Humen TOD<br>Railway Station</div>
+    <div class="brief-sub">Award-winning TOD development integrating landscape with rail</div>
+    <p class="brief-desc">Award-winning TOD development integrating landscape design with high-speed rail infrastructure. Client: Poly Real Estate Group. Winner of the 2021 Yuanye Award Gold Prize. The project demonstrates how transit-oriented development can create meaningful public landscapes that serve both commuters and surrounding communities.</p>
+    <div class="brief-meta">
+      <span>Dongguan, China</span><span class="sep">|</span>
+      <span>14 hectares</span><span class="sep">|</span>
+      <span>2020 &ndash; 2021</span><span class="sep">|</span>
+      <span>$2.9M USD</span><span class="sep">|</span>
+      <span style="color:var(--sage);font-weight:500">2021 Yuanye Award Gold Prize</span>
+    </div>
+  </div>
+  <div class="pn">32</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/53d60306-7e25-4bce-bac4-bccb4a1a8471.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Project bidding and creative design concept development</li>
+      <li>Site survey organization and condition assessment</li>
+      <li>Design sketches from concept to construction stages</li>
+      <li>Monthly site inspection reports and budget management</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">33</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/e5f85d8d-de98-40c9-85f0-ba28f02330c9.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/e358d76a-4ec7-46ca-8c09-978900b8f6ca.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/b76d2a91-9fc7-4be6-bc98-bf8031cde836.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 07 — Yantai Convention Center  (Pages 37–41)           ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">07</div>
+  <div>
+    <div class="brief-cat">Landmark Destinations</div>
+    <div class="brief-title">Yantai Bajiao Bay International<br>Convention Center</div>
+    <div class="brief-sub">Large-scale convention center landscape design</div>
+    <p class="brief-desc">Large-scale convention center landscape design integrating the &ldquo;City Shore Cloud Waves &amp; Sea Cloud Shell&rdquo; concept. Featuring 8 indoor exhibition halls covering 56,000 m&sup2;. The landscape design creates a seamless transition between the coastal environment and the monumental architecture of the convention complex.</p>
+    <div class="brief-meta">
+      <span>Yantai, Shandong, China</span><span class="sep">|</span>
+      <span>200,000 m&sup2;</span><span class="sep">|</span>
+      <span>2021 &ndash; 2024</span><span class="sep">|</span>
+      <span>Investment: $465M USD</span>
+    </div>
+  </div>
+  <div class="pn">37</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/edbeaf74-809e-4b26-9e8b-1e5b9c5c9971.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Project Manager overseeing full design and construction lifecycle</li>
+      <li>Concept design and design development</li>
+      <li>Client presentation leadership for design concepts and scheme proposals</li>
+      <li>Creative scheme development and design iteration management</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">38</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/ab7b89ee-7023-4b26-90ca-cc4429368b7b.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/d737749b-10fc-4f24-9892-6abdbb1e8564.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/e365b775-3f9c-4e19-a173-8dd3379facef.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 08 — Mountain and Blue  (Pages 42–46)                  ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">08</div>
+  <div>
+    <div class="brief-cat">Living Environments</div>
+    <div class="brief-title">Mountain and Blue<br>Residential Project</div>
+    <div class="brief-sub">Remarkable landscape design capitalizing on terrain</div>
+    <p class="brief-desc">Remarkable landscape design by New World Group capitalizing on &ldquo;three-sided mountain, one-sided sea&rdquo; terrain. Features a 24-metre three-tiered waterfall, 360-metre spring water system, and terraced design. The project transforms challenging topography into a distinctive residential experience celebrating its natural setting.</p>
+    <div class="brief-meta">
+      <span>Shekou, Shenzhen, China</span><span class="sep">|</span>
+      <span>40,000 m&sup2;</span><span class="sep">|</span>
+      <span>2016 &ndash; 2023</span><span class="sep">|</span>
+      <span>Client: New World Group</span>
+    </div>
+  </div>
+  <div class="pn">42</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/9cc08866-9f0d-465e-ac08-94e5153b98a8.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Terrain elevation management through ingenious terrace design</li>
+      <li>Super high-rise setback and overhang design mimicking mountain shapes</li>
+      <li>24-metre three-tiered waterfall and spring water system design</li>
+      <li>Rock-wall waterfalls and native plant ecological buffer creation</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">43</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/b9d9b02b-3c6f-4d9b-87db-0ad849f0601e.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/c5927f96-7371-42e2-9486-c5d40fca8747.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/1ece340b-36ed-49c4-8be2-29d13247c283.png" alt="">
+</div>
+
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  PROJECT 09 — Yuexiu Nanzhou  (Pages 47–51)                     ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+
+<!-- Brief -->
+<div class="page landscape brief-page">
+  <div class="brief-watermark">09</div>
+  <div>
+    <div class="brief-cat">Living Environments</div>
+    <div class="brief-title">Yuexiu Nanzhou Road<br>Residential Garden</div>
+    <div class="brief-sub">Premium residential landscape with integrated water systems</div>
+    <p class="brief-desc">Premium residential landscape featuring integrated water systems, modern architectural elements, and sustainable urban design with innovative circular building forms and terraced landscaping. The project creates a sophisticated garden environment that elevates the residential experience through thoughtful material selection and spatial composition.</p>
+    <div class="brief-meta">
+      <span>Guangzhou, China</span><span class="sep">|</span>
+      <span>25,000 m&sup2;</span><span class="sep">|</span>
+      <span>2022</span><span class="sep">|</span>
+      <span>Client: Yuexiu Real Estate</span>
+    </div>
+  </div>
+  <div class="pn">47</div>
+</div>
+
+<!-- Hero + Key Responsibilities -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/e7708483-1000-49cd-8ab7-cbf185dbda22.png" alt="">
+  <div class="resp-overlay">
+    <div class="resp-label">Key Responsibilities</div>
+    <ul>
+      <li>Cross-disciplinary team coordination between architects, engineers, and landscape consultants</li>
+      <li>Project timeline management and milestone tracking</li>
+      <li>Quality assurance and design compliance monitoring throughout construction</li>
+      <li>Budget coordination and resource allocation management</li>
+    </ul>
+  </div>
+  <div class="pn pn-white">48</div>
+</div>
+
+<!-- Gallery 1 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/8ebf9e8e-e3ed-4187-89be-8883e6be9f6a.png" alt="">
+</div>
+
+<!-- Gallery 2 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/1366c1de-fea4-4608-96a4-23f80ee74fc4.png" alt="">
+</div>
+
+<!-- Gallery 3 -->
+<div class="page landscape">
+  <img class="fullimg" src="https://ryondu-portfolio-2025.lovable.app/lovable-uploads/b1d3c1c5-9465-42cb-821e-cae41749c122.png" alt="">
+</div>
+
+
+<!-- ══════════════ PAGE 52 — AWARDS + CLOSING (Portrait) ══════════════ -->
+<div class="page cv-pad" style="display:flex;flex-direction:column;justify-content:center">
+  <div>
+    <div class="label-sage" style="margin-bottom:5mm;letter-spacing:0.12em">RECOGNITION</div>
+    <hr class="sage-rule" style="margin-bottom:8mm">
+    <div style="margin-bottom:12mm">
+      <div style="font-family:var(--serif);font-size:22pt;color:var(--black);margin-bottom:2mm">2021 Yuanye Award — Gold Prize</div>
+      <div class="cap-t">Dongguan Humen TOD Railway Station Commercial Complex</div>
+      <div class="cap-t">Awarded by the Chinese Society of Landscape Architecture</div>
+    </div>
+    <hr style="border:none;border-top:0.15mm solid #eee;margin:10mm 0">
+    <div style="max-width:155mm">
+      <p class="body-t" style="font-size:15pt;line-height:1.7;margin-bottom:6mm">Over 14 years of practice, I have developed a deep commitment to creating landscapes that are ecologically resilient, culturally meaningful, and socially inclusive. My experience spans the full project lifecycle — from environmental assessment and master planning to construction documentation and site supervision — across diverse typologies including transit-oriented developments, coastal resilience, and urban public realm.</p>
+      <p class="body-t" style="font-size:15pt;line-height:1.7;margin-bottom:6mm">I believe the future of landscape architecture lies in cross-disciplinary collaboration, where designers work alongside ecologists, engineers, urban planners, and communities to shape environments that respond to the challenges of climate change, rapid urbanization, and evolving human needs.</p>
+      <p class="body-t" style="font-size:14pt;line-height:1.7;color:var(--sage);font-style:italic">Pioneering the integration of AI and computational tools into landscape design practice.</p>
+    </div>
+  </div>
+  <div class="pn">52</div>
+</div>
+
+<!-- ══════════════ PAGE 53 — CONTACT (Portrait) ══════════════ -->
+<div class="page" style="background:#000;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+  <div>
+    <div style="font-family:var(--serif);font-size:56pt;color:#fff;letter-spacing:-0.03em;line-height:1;margin-bottom:8mm">WEIHAO DU</div>
+    <div style="font-family:var(--sans);font-size:14pt;color:var(--sage);font-weight:400;letter-spacing:0.1em;margin-bottom:16mm">LANDSCAPE ARCHITECT</div>
+    <div style="font-family:var(--sans);font-size:12pt;color:rgba(255,255,255,0.6);line-height:2.2">
+      <div>rdxmmcdu@gmail.com</div>
+      <div>edge-landscape.pages.dev</div>
+      <div style="margin-top:4mm;color:rgba(255,255,255,0.35);font-size:10pt">Shenzhen, China &nbsp;&middot;&nbsp; Hong Kong</div>
+    </div>
+  </div>
+  <div class="pn" style="color:rgba(255,255,255,0.3)">53</div>
+</div>
+
+</body>
+</html>
